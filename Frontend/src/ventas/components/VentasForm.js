@@ -1,7 +1,7 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-const VentasForm = ({ handleChange, handleClick, categorias, formValue }) => {
+const VentasForm = ({ handleChange, handleClick, categorias, productos, vendedores, formValue }) => {
   return (
     <Form>
       <Form.Group className="mb-3">
@@ -14,14 +14,22 @@ const VentasForm = ({ handleChange, handleClick, categorias, formValue }) => {
         />
       </Form.Group>
 
+      
       <Form.Group className="mb-3">
         <Form.Label>Producto</Form.Label>
-        <Form.Control
-          type="text"
+        <Form.Select
+          aria-label="Default select example"
           name="Producto"
           onChange={handleChange}
           value={formValue.Producto}
-        />
+        >
+          <option>Seleccione un producto</option>
+          {productos.map((producto) => (
+            <option key={producto._id} value={producto._id}>
+              {producto.title}
+            </option>
+          ))}
+        </Form.Select>
       </Form.Group>
 
       <Form.Group className="mb-3">
@@ -65,14 +73,22 @@ const VentasForm = ({ handleChange, handleClick, categorias, formValue }) => {
         />
       </Form.Group>
 
+      
       <Form.Group className="mb-3">
         <Form.Label>Vendedor</Form.Label>
-        <Form.Control
-          type="text"
+        <Form.Select
+          aria-label="Default select example"
           name="Vendedor"
           onChange={handleChange}
-          value={formValue.Vendedor}
-        />
+          value={formValue.categoria}
+        >
+          <option>Seleccione un vendedor</option>
+          {vendedores.map((vendedor) => (
+            <option key={vendedor._id} value={vendedor._id}>
+              {vendedor.nombre}
+            </option>
+          ))}
+        </Form.Select>
       </Form.Group>
 
       <Form.Group className="mb-3">

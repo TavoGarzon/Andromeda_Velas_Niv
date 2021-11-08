@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import api from "../../api";
 import VentaForm from "../components/VentasForm";
@@ -20,7 +20,7 @@ const SistemaVentas = ({ ventas, setVentas }) => {
 
   const [error, setError] = useState();
   const [success, setSuccess] = useState();
-
+  const [productos, setProductos] = useState([]); 
   const [newVenta, setNewVenta] = useState({
     Fecha_Venta: "",
     Producto: "",
@@ -31,6 +31,15 @@ const SistemaVentas = ({ ventas, setVentas }) => {
     Vendedor: "",
     Categoria: "",
   });
+
+  useEffect(() => {
+    const fetchData = async () =>{
+      const response = await api.products.list();
+      setProductos(response);
+    };
+    fetchData (); 
+      
+  }, []);
 
   const handleChange = (event) => {
     setNewVenta({ ...newVenta, [event.target.name]: event.target.value });
@@ -59,6 +68,7 @@ const SistemaVentas = ({ ventas, setVentas }) => {
               handleClick={handleClick}
               categorias={categorias}
               vendedores={vendedores}
+              productos={productos}
               formValue={newVenta}
             />
           </Col>
