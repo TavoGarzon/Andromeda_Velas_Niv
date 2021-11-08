@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import GoogleLogin from "react-google-login";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+import { NavDropdown } from 'react-bootstrap';
 
 const HeaderButtons = () => {
   const {loginWithRedirect, isAuthenticated, user, logout, getAccessTokenSilently} = useAuth0();
@@ -96,6 +97,7 @@ const HeaderButtons = () => {
             Salir
           </Button>
         </Link>
+        <NavDropdown title={Name} id="navbarScrollingDropdown"></NavDropdown>
       </React.Fragment>
     );
   } else {

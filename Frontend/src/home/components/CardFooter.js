@@ -5,7 +5,7 @@ const CardFooter = ({
   id,
   precio,
   categoria,
-  isAuthenticated,
+  isLoggedIn,
   productos,
   carrito,
   setCarrito,
@@ -37,7 +37,7 @@ const CardFooter = ({
     console.log(carrito);
   };
 
-  if (isAuthenticated) {
+  if (isLoggedIn) {
     return (
       <Button id={id} variant="primary" onClick={AddProduct}>
         ${precio}
