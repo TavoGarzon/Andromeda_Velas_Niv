@@ -20,7 +20,7 @@ const VentasRealizadas = ({ ventas, setNewVenta }) => {
             <tr>
               <th>Fecha Ventas</th>
               <th>Producto</th>
-              <th>Referncia</th>
+              <th>Referencia</th>
               <th>Precio</th>
               <th>Descripcion</th>
               <th>Sucursal</th>
