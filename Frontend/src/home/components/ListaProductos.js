@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Producto from "./Producto";
 
-const ListaProductos = ({ isLoggedIn, carrito, setCarrito, productos }) => {
+const ListaProductos = ({ isAuthenticated, carrito, setCarrito, productos }) => {
   return (
     <Container>
       <Row>
@@ -9,7 +9,7 @@ const ListaProductos = ({ isLoggedIn, carrito, setCarrito, productos }) => {
           <Col xs={4} key={producto._id}>
             <Producto
               producto={producto}
-              isLoggedIn={isLoggedIn}
+              isAuthenticated={isAuthenticated}
               productos={productos}
               carrito={carrito}
               setCarrito={setCarrito}

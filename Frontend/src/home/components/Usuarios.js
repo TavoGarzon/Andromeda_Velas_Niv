@@ -1,7 +1,7 @@
 import Card from "react-bootstrap/Card";
 import CardFooter from "./CardFooter";
 
-const Usuarios = ({ usuarios, isLoggedIn, usuario, carrito, setCarrito }) => {
+const Usuarios = ({ usuarios, isAuthenticated, usuario, carrito, setCarrito }) => {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src={usuarios.url} />
@@ -16,7 +16,7 @@ const Usuarios = ({ usuarios, isLoggedIn, usuario, carrito, setCarrito }) => {
           correo={usuarios.Correo}
           sucursal={usuarios.Sucursal}
           roles={usuarios.Rol}
-          isLoggedIn={isLoggedIn}
+          isAuthenticated={isAuthenticated}
           usuario={usuario}
           carrito={carrito}
           setCarrito={setCarrito}

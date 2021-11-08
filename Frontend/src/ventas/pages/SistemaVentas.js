@@ -7,20 +7,15 @@ const SistemaVentas = ({ ventas, setVentas }) => {
   const categorias = [
     { id: 1, nombre: "Moderno" },
     { id: 2, nombre: "Informal" },
-    { id: 3, nombre: "Bohemio" },
-    { id: 4, nombre: "Clasico" },
-    { id: 5, nombre: "Deportes" },
-    { id: 6, nombre: "Elegante" },
-    { id: 7, nombre: "Casual" },
-    { id: 8, nombre: "Juvenil" },
+    { id: 3, nombre: "Apasionado" },
   ];
 
   const vendedores = [
-    { id: 100, nombre: "Andrea" },
-    { id: 200, nombre: "Camila" },
-    { id: 300, nombre: "Edison" },
-    { id: 400, nombre: "Jairo" },
-    { id: 500, nombre: "Yefferson" },
+    { id: 100, nombre: "Sebastian" },
+    { id: 200, nombre: "Mariana" },
+    { id: 300, nombre: "Gustavo" },
+    { id: 400, nombre: "Luis" },
+    { id: 500, nombre: "Ana" },
   ];
 
   const [error, setError] = useState();

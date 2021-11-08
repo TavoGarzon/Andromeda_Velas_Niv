@@ -4,7 +4,7 @@ import TablaProductosDisponibles from "../components/TablaProductosDiponibles";
 const ProductosDisponibles = () => {
   return (
     <div>
-      <h1 className="text-center mt-5 mb-5">Productos más vendidos</h1>,
+      <h1 className="text-center mt-5 mb-5">Productos Populares</h1>,
       <TablaProductosDisponibles />
     </div>
   );

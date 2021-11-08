@@ -70,7 +70,7 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <Home
-            isLoggedIn={logged}
+            isAuthenticated={logged}
             carrito={carrito}
             setCarrito={setCarrito}
             productos={productos}
