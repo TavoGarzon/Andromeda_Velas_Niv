@@ -1,5 +1,6 @@
-import "./App.css";
+import { Auth0Provider } from "@auth0/auth0-react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import {
   BrowserRouter as Router,
   Route,
@@ -23,6 +24,8 @@ import CrearUsuario from "./usuarios/pages/CrearUsuario";
 import EditarUsuario from "./usuarios/pages/EditarUsuario";
 import api from "./api";
 import { useEffect } from "react";
+import HeaderButtons from "./shared/components/HeaderButtons";
+
 
 function App() {
   const [logged, setLogged] = useState(false);
@@ -54,15 +57,16 @@ function App() {
   }, []);
 
   return (
+    
+
     <Router>
-      <Header
-        isLoggedIn={logged}
-        login={setLogged}
-        cantCarrito={carrito.reduce(
-          (total, producto) => total + producto.cantidad,
-          0
-        )}
-      />
+      <Auth0Provider
+    domain="andromedavelas.us.auth0.com"
+    clientId="KQiL8lpnW894xsbKPOjrVObPPIekLkVI"
+    redirectUri={window.location.origin}
+    >
+    <Header />
+    </Auth0Provider>,
       <Switch>
         <Route path="/" exact>
           <Home
