@@ -91,18 +91,24 @@ const HeaderButtons = () => {
             Gestion Usuarios
           </Button>
         </Link>
-
-        <Link to="/">
+        <NavDropdown title={Name} id="navbar">
+        <NavDropdown.Item>
+          <Link to="/">
           <Button variant="primary" onClick={logout}>
             Salir
           </Button>
-        </Link>
-        <NavDropdown title={Name} id="navbarScrollingDropdown"></NavDropdown>
+        </Link></NavDropdown.Item>
+        </NavDropdown>
       </React.Fragment>
     );
   } else {
     return (
       <div>
+        <Link to="/ProductosDisponibles">
+          <Button variant="primary" className="me-3">
+            Productos
+          </Button>
+        </Link>
          {
         isAuthenticated ?
         <button
