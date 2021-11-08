@@ -76,7 +76,7 @@ const HeaderButtons = () => {
 
         <Link to="/ProductosDisponibles">
           <Button variant="primary" className="me-3">
-            Productos
+            Productos Andromeda 
           </Button>
         </Link>
 
@@ -106,7 +106,7 @@ const HeaderButtons = () => {
       <div>
         <Link to="/ProductosDisponibles">
           <Button variant="primary" className="me-3">
-            Productos
+            Productos Andromeda
           </Button>
         </Link>
          {
