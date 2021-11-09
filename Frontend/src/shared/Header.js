@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import HeaderButtons from "./components/HeaderButtons";
 
-const Header = ({ isLoggedIn, login, cantCarrito }) => {
+const Header = () => {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
